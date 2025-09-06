@@ -20,9 +20,22 @@ header {
   position: relative;
   width: 100%;
 }
+header .logo{
+  display: flex;              
+  align-items: center;        
+  gap: 10px;     
+}
 header .logo img {
-  height: 60px; 
-  width: auto;
+  height: 60px;
+  width: 60px;                
+  border-radius: 50%;         
+  object-fit: cover; 
+}
+header .logo-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
 }
 nav ul {
   list-style: none;
@@ -114,10 +127,14 @@ nav a.active {
 }
 footer {
   text-align: center;
-  background: #333;
+  background: #2e7d32;
   color: white;
   padding: 15px;
   margin-top: 20px;
+}
+footer a{
+  color: #ffeb3b;         
+  text-decoration: none;   
 }
 @media (max-width: 768px) {
   header {
@@ -167,5 +184,98 @@ footer {
   .intro-image img {
     width: 100%;
     height: auto;
+  }
+}
+.contact-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.contact-section h2 {
+  font-size: 32px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+.contact-section p {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+.contact-form button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.contact-form button:hover {
+  background-color: #45a049;
+}
+.contact-links {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.contact-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.contact-links a:hover {
+  color:#45a049;
+}
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color:#2e7d32 ;
+  color: white;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2e7d32;
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    padding: 10px 0;
+  }
+  #menu-toggle:checked + .hamburger + nav ul {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
   }
 }

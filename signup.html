@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - AgriPrice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <h2>Create Account</h2>
+    <form action="/signup" method="POST" class="auth-form">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <select required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="farmer">Farmer</option>
+        <option value="buyer">Buyer</option>
+      </select>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p class="switch">Already have an account? <a href="login.html">Log In</a></p>
+  </div>
+
+</body>
+</html>
